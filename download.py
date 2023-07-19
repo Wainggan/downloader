@@ -12,6 +12,9 @@ if not os.path.exists("links.txt"):
 
 fl = open("links.txt", 'r')
 
+if not os.path.exists("output/"):
+	os.mkdir("output/")
+
 lines = fl.read().splitlines()
 
 for link in lines:
@@ -26,6 +29,6 @@ for link in lines:
 	else:
 		print("failed")
 
-	with open(os.path.basename(link), 'wb') as file:
+	with open("output/" + os.path.basename(link), 'wb') as file:
 		file.write(r.content)
 
