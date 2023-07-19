@@ -1,4 +1,4 @@
-import os, urllib.request, requests
+import os, requests
 
 if not os.path.exists("links.txt"):
 	fl = open("links.txt", 'w')
