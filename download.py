@@ -21,7 +21,7 @@ for link in lines:
 	if len(link) == 0: continue
 	if link[0] == "#": continue
 
-	print(link)
+	print("== downloading \"" + link + "\"...")
 	r = requests.get(link)
 
 	if r.status_code == requests.codes.ok:
